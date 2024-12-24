@@ -1,5 +1,5 @@
 const SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbyvDqQr8D9IfBJZMW1bholF-fRmex_4r7t6IhBteD1_34oms94yZcj8Bb30ZP1Gjw/exec';
+  'https://script.google.com/macros/s/AKfycbzM3AT8_8geBQLWi9rpYvMS6HUDLvVNORNPTB0qm9ShMB6zcz1QX6coywQYDVi_Zzc/exec';
 
 export interface LastResponse {
   timestamp: string;
