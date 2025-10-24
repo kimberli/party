@@ -34,7 +34,7 @@ export default function PartyInfo(): JSX.Element {
         </p>
         <p>
           <span className="font-semibold">flight</span>:{' '}
-          <Tooltip text="you might get it cheaper on cheapoair">
+          <Tooltip text="you might get it cheaper on cheapoair. try the fusion fare for $279 pp">
             <a href={LINK} target="_blank" className="font-semibold">
               book this
             </a>
