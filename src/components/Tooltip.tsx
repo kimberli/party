@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 export default function Tooltip({
   children,
@@ -9,19 +9,9 @@ export default function Tooltip({
 }): JSX.Element {
   const [show, setShow] = useState(false);
 
-  const handleClick = useCallback(
-    (e: React.MouseEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
-      setShow(!show);
-    },
-    [show]
-  );
-
   return (
     <span
       className="relative inline-block hover:cursor-default touch:cursor-pointer"
-      onClick={handleClick}
       onMouseEnter={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
     >
