@@ -25,7 +25,9 @@ export default function PartyInfo(): JSX.Element {
         i know it's a big ask to fly and spend a weekend, but i hope we'll have a better time as a
         smaller group. if you can't make it, no hard feelings! i might do something else local too
       </p>
-      <img src="/whale.svg" alt="whale" className="w-24 h-16 drop-shadow-lg" />
+      <div className="animate-swim">
+        <img src="/whale.svg" alt="whale" className="w-24 h-16 drop-shadow-lg" />
+      </div>
       <div className="flex flex-col gap n-w-54">
         <p>
           <span className="font-semibold">dates</span>: sat 1/17/26 to tues 1/20/26 (or mon 1/19)
