@@ -7,10 +7,12 @@ a {
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -25,10 +27,16 @@ a {
   animation-delay: -1s;
 }
 
+.float-animation-delayed-2 {
+  animation: float 3s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
 @keyframes squiggle {
   from {
     background-position: 0 0;
   }
+
   to {
     background-position: 30px 0;
   }

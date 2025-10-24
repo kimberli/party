@@ -1,43 +1,44 @@
 import { useApp } from '../context/AppContext';
-import PartyAttendees from './PartyAttendees';
+import Tooltip from './Tooltip';
+
+const LINK = 'https://www.google.com/travel/flights/s/11XGT2KWBFWAGSrv5';
 
 export default function PartyInfo(): JSX.Element {
-  const { name, isValidated, isRsvped, location } = useApp();
+  const { name, isValidated } = useApp();
   if (!isValidated) {
     return <></>;
   }
 
   return (
-    <div className="flex flex-col gap-2 my-4 items-center">
+    <div className="flex flex-col gap-2 my-4 max-w-xl mx-auto items-center text-sm">
+      <p>hey {name.split(' ')[0]}. here's my proposal.</p>
+      <p>i wanna do one last fun thing before my twenties are over. let's go see whales!</p>
       <p>
-        hey {name.split(' ')[0]}, you're invited to a little get-together for my birthday this year.
+        i'll book a villa in cabo and reserve a boat that will take us out. we can do other fun
+        stuff too. if you're up for it, join me on{' '}
+        <a href={LINK} target="_blank">
+          this flight
+        </a>{' '}
+        and i'll take care of the rest.
       </p>
-      {isRsvped() && (
-        <p className="text-xs">
-          we'll have the patio reserved for a few hours and an open bar, so bring a warm jacket and
-          an appetite.
-        </p>
-      )}
-      <div className="flex flex-col gap text-left min-w-54">
+      <p className="text-xs">
+        i know it's a big ask to fly and spend a weekend, but i hope we'll have a better time as a
+        smaller group. if you can't make it, no hard feelings! i might do something else local too
+      </p>
+      <img src="/whale.svg" alt="whale" className="w-24 h-16 drop-shadow-lg" />
+      <div className="flex flex-col gap n-w-54">
         <p>
-          <span className="font-semibold">date</span>: sat 1/25/2025
-        </p>
-        <p>
-          <span className="font-semibold">time</span>: 1 to 4 pm
+          <span className="font-semibold">dates</span>: sat 1/17/26 to tues 1/20/26 (or mon 1/19)
         </p>
         <p>
-          <span className="font-semibold">location</span>:{' '}
-          {isRsvped() && location ? (
-            <a target="_blank" href={location.url}>
-              {location.name}
+          <span className="font-semibold">flight</span>:{' '}
+          <Tooltip text="you might get it cheaper on cheapoair">
+            <a href={LINK} target="_blank" className="font-semibold">
+              book this
             </a>
-          ) : (
-            <em>rsvp first</em>
-          )}
+          </Tooltip>{' '}
+          or whatever you want
         </p>
-      </div>
-      <div>
-        <PartyAttendees isRsvped={isRsvped()} />
       </div>
     </div>
   );
