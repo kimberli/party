@@ -14,7 +14,7 @@ export default function PartyInfo(): JSX.Element {
       <p>hey {name.split(' ')[0]}. here's my proposal.</p>
       <p>i wanna do one last fun thing before my twenties are over. let's go see whales!</p>
       <p>
-        i'll book a villa in cabo and reserve a boat that will take us out. we can do other fun
+        i've booked <a href="https://www.airbnb.com/rooms/20172086" target="_blank">this villa</a> in baja california and reserved <a href="https://www.deserticabajasur.com/" target="_blank">these guides</a> that will take us on a marine safari. we can do other fun
         stuff too. if you're up for it, join me on{' '}
         <a href={LINK} target="_blank">
           this flight
@@ -30,7 +30,7 @@ export default function PartyInfo(): JSX.Element {
       </div>
       <div className="flex flex-col gap n-w-54">
         <p>
-          <span className="font-semibold">dates</span>: sat 1/17/26 to tues 1/20/26 (or mon 1/19)
+          <span className="font-semibold">dates</span>: sat 1/17/26 to tues 1/20/26
         </p>
         <p>
           <span className="font-semibold">flight</span>:{' '}
@@ -39,8 +39,9 @@ export default function PartyInfo(): JSX.Element {
               book this
             </a>
           </Tooltip>{' '}
-          or whatever you want
+          or something similar
         </p>
+        <p><span className="font-semibold">rsvp deadline</span>: dec 16, 2025 (3 spots remaining)</p>
       </div>
     </div>
   );
